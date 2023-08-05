@@ -14,4 +14,12 @@ public class Conta {
         }
         return false;
     }
+
+    public boolean transferir (double valor, Conta conta) {
+        if (sacar(valor)) {
+            conta.depositar(valor);
+            return true;
+        }
+        return false;
+    }
 }
