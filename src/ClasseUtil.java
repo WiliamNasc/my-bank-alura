@@ -15,18 +15,8 @@ public  class ClasseUtil {
         return new Cliente();
     }
 
-    public static void adicionarNumeroConta(Conta conta, int numero) {
-        conta.numero = numero;
-    }
-
-    public static void imprimirSaldoConta(Conta conta) {
-        imprimirTexto("Saldo da conta " + conta.numero + ": " + conta.saldo);
-    }
-
-    public static void imprimirTitularConta(Conta conta) {
-        imprimirTexto("Titular conta: " + conta.titular.getNome());
-        imprimirTexto("CPF: " + conta.titular.getCpf());
-        imprimirTexto("Profissão: " + conta.titular.getProfissao());
+    public static void imprimirInformacoesConta(Conta conta) {
+        imprimirTexto("Informações da conta: " + conta.toString());
     }
 
     public static void pularLinha() {

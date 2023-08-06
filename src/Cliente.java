@@ -1,7 +1,7 @@
 public class Cliente {
-    String nome;
-    String cpf;
-    String profissao;
+    String nome = "-";
+    String cpf = "-";
+    String profissao = "-";
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -27,4 +27,9 @@ public class Cliente {
         return this.profissao;
     }
 
+    public String toString() {
+        return "Titular: " + this.nome +
+               "\n" + "CPF: " + this.cpf +
+               "\n" + "Profissão: " + this.profissao;
+    }
 }

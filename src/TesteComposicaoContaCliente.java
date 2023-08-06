@@ -17,7 +17,9 @@ public class TesteComposicaoContaCliente {
         ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
 
         ClasseUtil.imprimirTexto("Cenário 1: Associando conta ao cliente");
+        ClasseUtil.pularLinha();
         conta.setTitular(cliente);
-        ClasseUtil.imprimirTitularConta(conta);
+        ClasseUtil.imprimirInformacoesConta(conta);
+        ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
     }
 }
