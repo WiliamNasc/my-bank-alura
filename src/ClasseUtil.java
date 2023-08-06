@@ -11,12 +11,12 @@ public  class ClasseUtil {
         return new Conta();
     }
 
-    public static void adicionarNumeroConta(Conta conta, int numero) {
-        conta.numero = numero;
+    public static Cliente criarCliente() {
+        return new Cliente();
     }
 
-    public static void imprimirSaldoConta(Conta conta) {
-        imprimirTexto("Saldo da conta " + conta.numero + ": " + conta.saldo);
+    public static void imprimirInformacoesConta(Conta conta) {
+        imprimirTexto("Informações da conta: " + conta.toString());
     }
 
     public static void pularLinha() {

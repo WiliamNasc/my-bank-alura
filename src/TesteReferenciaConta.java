@@ -5,16 +5,18 @@ public class TesteReferenciaConta {
         ClasseUtil.imprimirTexto("Contas criadas:");
         ClasseUtil.pularLinha();
         Conta primeiraConta = ClasseUtil.criarConta();
-        ClasseUtil.adicionarNumeroConta(primeiraConta, 1);
+        primeiraConta.setNumero(1);
         primeiraConta.depositar(300);
-        ClasseUtil.imprimirSaldoConta(primeiraConta);
+        ClasseUtil.imprimirInformacoesConta(primeiraConta);
+        ClasseUtil.pularLinha();
         Conta segundaConta = primeiraConta;
-        ClasseUtil.adicionarNumeroConta(segundaConta, 2);
-        ClasseUtil.imprimirSaldoConta(segundaConta);
+        segundaConta.setNumero(2);
+        ClasseUtil.imprimirInformacoesConta(segundaConta);
+        ClasseUtil.pularLinha();
         Conta terceiraConta = ClasseUtil.criarConta();
-        ClasseUtil.adicionarNumeroConta(terceiraConta, 3);
+        terceiraConta.setNumero(3);
         terceiraConta.depositar(500);
-        ClasseUtil.imprimirSaldoConta(terceiraConta);
+        ClasseUtil.imprimirInformacoesConta(terceiraConta);
 
         ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
 
