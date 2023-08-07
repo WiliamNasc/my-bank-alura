@@ -5,12 +5,12 @@ public class TesteMetodoConta {
         ClasseUtil.pularLinha();
         Conta primeiraConta = ClasseUtil.criarConta();
         primeiraConta.setNumero(1);
-        ClasseUtil.imprimirTexto("Conta " + primeiraConta.numero + " criada");
+        ClasseUtil.imprimirTexto("Conta " + primeiraConta.getNumero() + " criada");
         ClasseUtil.imprimirInformacoesConta(primeiraConta);
         ClasseUtil.pularLinha();
         Conta segundaConta = ClasseUtil.criarConta();
         segundaConta.setNumero(2);
-        ClasseUtil.imprimirTexto("Conta " + segundaConta.numero + " criada");
+        ClasseUtil.imprimirTexto("Conta " + segundaConta.getNumero() + " criada");
         ClasseUtil.imprimirInformacoesConta(segundaConta);
 
         ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
@@ -26,8 +26,8 @@ public class TesteMetodoConta {
         ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
 
         ClasseUtil.imprimirTexto("Cenário 2: sacando o valor de 50 reais da primeira conta e 20 da segunda");
-        ClasseUtil.imprimirTexto("Saque realizado na conta " + primeiraConta.numero +  ": " + primeiraConta.sacar(50));
-        ClasseUtil.imprimirTexto("Saque realizado na conta " + segundaConta.numero +  ": " + segundaConta.sacar(20));
+        ClasseUtil.imprimirTexto("Saque realizado na conta " + primeiraConta.getNumero() +  ": " + primeiraConta.sacar(50));
+        ClasseUtil.imprimirTexto("Saque realizado na conta " + segundaConta.getNumero() +  ": " + segundaConta.sacar(20));
         ClasseUtil.imprimirInformacoesConta(primeiraConta);
         ClasseUtil.pularLinha();
         ClasseUtil.imprimirInformacoesConta(segundaConta);

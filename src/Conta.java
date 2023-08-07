@@ -1,8 +1,8 @@
 public class Conta {
-    double saldo;
-    int agencia;
-    int numero;
-    Cliente titular = new Cliente();
+    private double saldo;
+    private int agencia;
+    private int numero;
+    private Cliente titular = new Cliente();
 
     public void depositar (double valor) {
         this.saldo += valor;

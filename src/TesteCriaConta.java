@@ -31,9 +31,9 @@ public class TesteCriaConta {
 
         ClasseUtil.imprimirTexto("Cenário 3: Visualizando agência e  número da conta criados");
         ClasseUtil.pularLinha();
-        ClasseUtil.imprimirTexto("Agência primeira conta: " + primeiraConta.agencia);
-        ClasseUtil.imprimirTexto("Conta primeira conta: " + primeiraConta.numero);
-        ClasseUtil.imprimirTexto("Agência segunda conta: " + primeiraConta.agencia);
-        ClasseUtil.imprimirTexto("Conta segunda conta: " + primeiraConta.numero);
+        ClasseUtil.imprimirTexto("Agência primeira conta: " + primeiraConta.getAgencia());
+        ClasseUtil.imprimirTexto("Conta primeira conta: " + primeiraConta.getNumero());
+        ClasseUtil.imprimirTexto("Agência segunda conta: " + segundaConta.getAgencia());
+        ClasseUtil.imprimirTexto("Conta segunda conta: " + segundaConta.getNumero());
     }
 }
