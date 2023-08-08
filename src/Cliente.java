@@ -1,7 +1,7 @@
 public class Cliente {
-    String nome = "-";
-    String cpf = "-";
-    String profissao = "-";
+    private String nome = "-";
+    private String cpf = "-";
+    private String profissao = "-";
 
     public void setNome(String nome) {
         this.nome = nome;
