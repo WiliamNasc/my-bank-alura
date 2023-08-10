@@ -1,30 +1,30 @@
 public class Cliente {
-    private String nome = "-";
-    private String cpf = "-";
-    private String profissao = "-";
+    private String nome;
+    private String cpf;
+    private String profissao;
 
-    public void setNome(String nome) {
+    private static int totalClientesInstanciados;
+
+    public Cliente(String nome, String cpf) {
+        totalClientesInstanciados++;
         this.nome = nome;
-    }
-
-    public String getNome() {
-        return this.nome;
-    }
-
-    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public String getCpf() {
-        return this.cpf;
+    public Cliente(String nome, String cpf, String profissao) {
+        totalClientesInstanciados++;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.profissao = profissao;
     }
 
     public void setProfissao(String profissao) {
         this.profissao = profissao;
     }
 
-    public String getProfissao() {
-        return this.profissao;
+
+    public static int getTotalClientesInstanciados() {
+        return totalClientesInstanciados;
     }
 
     public String toString() {

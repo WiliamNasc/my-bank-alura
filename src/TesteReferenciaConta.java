@@ -1,39 +1,36 @@
 public class TesteReferenciaConta {
 
     public static void main(String[] args) {
-        ClasseUtil.pularLinha();
-        ClasseUtil.imprimirTexto("Contas criadas:");
-        ClasseUtil.pularLinha();
-        Conta primeiraConta = ClasseUtil.criarConta();
-        primeiraConta.setNumero(1);
+        MostrarInformacaoUtil.pularLinha();
+        MostrarInformacaoUtil.imprimirTexto("Contas criadas:");
+        MostrarInformacaoUtil.pularLinha();
+        Conta primeiraConta = new Conta(12, 130401849, new Cliente("Wiliam", "202.658.690-59"));
         primeiraConta.depositar(300);
-        ClasseUtil.imprimirInformacoesConta(primeiraConta);
-        ClasseUtil.pularLinha();
+        ContaUtil.imprimirInformacoesConta(primeiraConta);
+        MostrarInformacaoUtil.pularLinha();
         Conta segundaConta = primeiraConta;
-        segundaConta.setNumero(2);
-        ClasseUtil.imprimirInformacoesConta(segundaConta);
-        ClasseUtil.pularLinha();
-        Conta terceiraConta = ClasseUtil.criarConta();
-        terceiraConta.setNumero(3);
+        ContaUtil.imprimirInformacoesConta(segundaConta);
+        MostrarInformacaoUtil.pularLinha();
+        Conta terceiraConta = new Conta(1, 130404598,  new Cliente("José", "896.658.690-74"));
         terceiraConta.depositar(500);
-        ClasseUtil.imprimirInformacoesConta(terceiraConta);
+        ContaUtil.imprimirInformacoesConta(terceiraConta);
 
-        ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
+        MostrarInformacaoUtil.pularLinhaEImprimirSeparadorDeConteudo();
 
-        ClasseUtil.imprimirTexto("Cenário 1: comparando primeira conta com segunda");
-        ClasseUtil.pularLinha();
-        ClasseUtil.imprimirSeAsContasSaoOuNaoIguais(primeiraConta, segundaConta);
+        MostrarInformacaoUtil.imprimirTexto("Cenário 1: comparando primeira conta com segunda");
+        MostrarInformacaoUtil.pularLinha();
+        ContaUtil.imprimirSeAsContasSaoOuNaoIguais(primeiraConta, segundaConta);
 
-        ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
+        MostrarInformacaoUtil.pularLinhaEImprimirSeparadorDeConteudo();
 
-        ClasseUtil.imprimirTexto("Cenário 2: comparando primeira conta com a terceira");
-        ClasseUtil.pularLinha();
-        ClasseUtil.imprimirSeAsContasSaoOuNaoIguais(primeiraConta, terceiraConta);
+        MostrarInformacaoUtil.imprimirTexto("Cenário 2: comparando primeira conta com a terceira");
+        MostrarInformacaoUtil.pularLinha();
+        ContaUtil.imprimirSeAsContasSaoOuNaoIguais(primeiraConta, terceiraConta);
 
-        ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
+        MostrarInformacaoUtil.pularLinhaEImprimirSeparadorDeConteudo();
 
-        ClasseUtil.imprimirTexto("Cenário 3: comparando a segunda conta com a terceira");
-        ClasseUtil.pularLinha();
-        ClasseUtil.imprimirSeAsContasSaoOuNaoIguais(segundaConta, terceiraConta);
+        MostrarInformacaoUtil.imprimirTexto("Cenário 3: comparando a segunda conta com a terceira");
+        MostrarInformacaoUtil.pularLinha();
+        ContaUtil.imprimirSeAsContasSaoOuNaoIguais(segundaConta, terceiraConta);
     }
 }
