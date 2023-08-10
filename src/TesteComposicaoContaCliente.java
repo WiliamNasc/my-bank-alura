@@ -1,25 +1,21 @@
 public class TesteComposicaoContaCliente {
     public static void main(String[] args) {
-        ClasseUtil.pularLinha();
-        ClasseUtil.imprimirTexto("Criando cliente");
-        Cliente cliente = ClasseUtil.criarCliente();
-        cliente.setNome("Wiliam");
-        cliente.setCpf("123.456.789-10");
-        cliente.setProfissao("Desenvolvedor");
+        MostrarInformacaoUtil.pularLinha();
+        MostrarInformacaoUtil.imprimirTexto("Criando cliente");
+        Cliente cliente = new Cliente("Wiliam", "448.456.789-10", "Desenvolvedor");
 
-        ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
+        MostrarInformacaoUtil.pularLinhaEImprimirSeparadorDeConteudo();
 
-        ClasseUtil.imprimirTexto("Criando conta");
-        Conta conta = new Conta();
-        conta.setNumero(1);
+        MostrarInformacaoUtil.imprimirTexto("Criando conta");
+        Conta conta = new Conta(1126, 130402022, null);
         conta.depositar(100);
 
-        ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
+        MostrarInformacaoUtil.pularLinhaEImprimirSeparadorDeConteudo();
 
-        ClasseUtil.imprimirTexto("Cenário 1: Associando conta ao cliente");
-        ClasseUtil.pularLinha();
+        MostrarInformacaoUtil.imprimirTexto("Cenário 1: Associando conta ao cliente");
+        MostrarInformacaoUtil.pularLinha();
         conta.setTitular(cliente);
-        ClasseUtil.imprimirInformacoesConta(conta);
-        ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
+        ContaUtil.imprimirInformacoesConta(conta);
+        MostrarInformacaoUtil.pularLinhaEImprimirSeparadorDeConteudo();
     }
 }

@@ -1,39 +1,37 @@
 public class TesteCriaConta {
     public static void main(String[] args) {
-        ClasseUtil.pularLinha();
-        ClasseUtil.imprimirTexto("Criando contas com valores depositados de 200 e 300 reais");
-        Conta primeiraConta = ClasseUtil.criarConta();
-        primeiraConta.setNumero(1);
+        MostrarInformacaoUtil.pularLinha();
+        MostrarInformacaoUtil.imprimirTexto("Criando contas com valores depositados de 200 e 300 reais");
+        Conta primeiraConta = new Conta(1, 123456, new Cliente("João", "123.456.789-10"));
         primeiraConta.depositar(200);
-        Conta segundaConta = ClasseUtil.criarConta();
-        segundaConta.setNumero(2);
+        Conta segundaConta = new Conta(2, 153957, new Cliente("Maria", "258.895.102-89"));
         segundaConta.depositar(300);
 
-        ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
+        MostrarInformacaoUtil.pularLinhaEImprimirSeparadorDeConteudo();
 
-        ClasseUtil.imprimirTexto("Cenário 1: Visualizando saldo das contas");
-        ClasseUtil.pularLinha();
-        ClasseUtil.imprimirInformacoesConta(primeiraConta);
-        ClasseUtil.pularLinha();
-        ClasseUtil.imprimirInformacoesConta(segundaConta);
+        MostrarInformacaoUtil.imprimirTexto("Cenário 1: Visualizando saldo das contas");
+        MostrarInformacaoUtil.pularLinha();
+        ContaUtil.imprimirInformacoesConta(primeiraConta);
+        MostrarInformacaoUtil.pularLinha();
+        ContaUtil.imprimirInformacoesConta(segundaConta);
 
-        ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
+        MostrarInformacaoUtil.pularLinhaEImprimirSeparadorDeConteudo();
 
-        ClasseUtil.imprimirTexto("Cenário 2: Visualizando saldo das contas após deposito de 20 reais");
-        ClasseUtil.pularLinha();
+        MostrarInformacaoUtil.imprimirTexto("Cenário 2: Visualizando saldo das contas após deposito de 20 reais");
+        MostrarInformacaoUtil.pularLinha();
         primeiraConta.depositar(20);
         segundaConta.depositar(20);
-        ClasseUtil.imprimirInformacoesConta(primeiraConta);
-        ClasseUtil.pularLinha();
-        ClasseUtil.imprimirInformacoesConta(segundaConta);
+        ContaUtil.imprimirInformacoesConta(primeiraConta);
+        MostrarInformacaoUtil.pularLinha();
+        ContaUtil.imprimirInformacoesConta(segundaConta);
 
-        ClasseUtil.pularLinhaEImprimirSeparadorDeConteudo();
+        MostrarInformacaoUtil.pularLinhaEImprimirSeparadorDeConteudo();
 
-        ClasseUtil.imprimirTexto("Cenário 3: Visualizando agência e  número da conta criados");
-        ClasseUtil.pularLinha();
-        ClasseUtil.imprimirTexto("Agência primeira conta: " + primeiraConta.getAgencia());
-        ClasseUtil.imprimirTexto("Conta primeira conta: " + primeiraConta.getNumero());
-        ClasseUtil.imprimirTexto("Agência segunda conta: " + segundaConta.getAgencia());
-        ClasseUtil.imprimirTexto("Conta segunda conta: " + segundaConta.getNumero());
+        MostrarInformacaoUtil.imprimirTexto("Cenário 3: Visualizando agência e  número da conta criados");
+        MostrarInformacaoUtil.pularLinha();
+        MostrarInformacaoUtil.imprimirTexto("Agência primeira conta: " + primeiraConta.getAgencia());
+        MostrarInformacaoUtil.imprimirTexto("Conta primeira conta: " + primeiraConta.getNumero());
+        MostrarInformacaoUtil.imprimirTexto("Agência segunda conta: " + segundaConta.getAgencia());
+        MostrarInformacaoUtil.imprimirTexto("Conta segunda conta: " + segundaConta.getNumero());
     }
 }
