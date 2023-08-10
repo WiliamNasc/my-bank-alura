@@ -3,8 +3,10 @@ public class Conta {
     private int agencia;
     private int numero;
     private Cliente titular;
+    private static int totalContasInstanciadas;
 
     public Conta(int agencia, int numero, Cliente cliente) {
+        totalContasInstanciadas++;
         this.agencia = agencia;
         this.numero = numero;
         this.titular = cliente;
@@ -43,6 +45,10 @@ public class Conta {
 
     public void setTitular(Cliente cliente) {
         this.titular = cliente;
+    }
+
+    public static int getTotalContasInstanciadas() {
+        return totalContasInstanciadas;
     }
 
     public String toString() {
