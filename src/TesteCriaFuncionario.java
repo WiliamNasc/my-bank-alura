@@ -13,6 +13,8 @@ public class TesteCriaFuncionario {
 
         System.out.println("Visualizando bonificação");
         System.out.println();
+        System.out.println("Salário: " + funcionario.getSalario());
+        System.out.println("Percentual bonificação: " + funcionario.getPercentualBonificacao() * 100 + "%");
         System.out.println("Bonificação do funcionário " + funcionario.getNome() + " :" + funcionario.getBonificacao());
     }
 }
