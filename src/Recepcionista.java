@@ -5,4 +5,8 @@ public class Recepcionista extends  Funcionario{
     public double getBonificacao() {
         return super.getBonificacao() + super.getSalario();
     }
+
+    public String toString() {
+        return "Recepcionista\n" + super.toString();
+    }
 }

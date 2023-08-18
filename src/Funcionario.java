@@ -34,4 +34,12 @@ public class Funcionario {
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+    public String toString() {
+        return "Nome: " + this.nome + "\n" +
+                "CPF: " + this.cpf + "\n" +
+                "Salário: " + this.salario + "\n" +
+                "Percentual de bonificação: " + this.getPercentualBonificacao() + "\n" +
+                "Bonificação: " + this.getBonificacao();
+    }
 }
