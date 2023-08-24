@@ -1,16 +1,6 @@
 public class TesteControleFuncionario {
 
     public static void main(String[] args) {
-        System.out.println("Criando funcionário genérico");
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome("João");
-        funcionario.setSalario(1000);
-        System.out.println();
-        System.out.println(funcionario.toString());
-
-        System.out.println();
-        System.out.println("=============================================");
-
         System.out.println("Criando funcionário do tipo gerente");
         Gerente gerente = new Gerente();
         gerente.setNome("Maria");
@@ -45,7 +35,6 @@ public class TesteControleFuncionario {
         System.out.println();
 
         ControleBonificacaoFuncionario controleBonificacaoFuncionario = new ControleBonificacaoFuncionario();
-        controleBonificacaoFuncionario.registrarBonificacaoFuncionario(funcionario);
         controleBonificacaoFuncionario.registrarBonificacaoFuncionario(gerente);
         controleBonificacaoFuncionario.registrarBonificacaoFuncionario(recepcionista);
         controleBonificacaoFuncionario.registrarBonificacaoFuncionario(vigilante);

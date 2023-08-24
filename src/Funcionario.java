@@ -1,11 +1,9 @@
-public class Funcionario {
+public abstract class Funcionario {
     private String nome;
     private String cpf;
     private double salario;
 
-    public double getBonificacao() {
-        return this.salario * this.getPercentualBonificacao();
-    }
+    public abstract double getBonificacao();
 
     public double getPercentualBonificacao() {
         return 0.1;
@@ -39,7 +37,7 @@ public class Funcionario {
         return "Nome: " + this.nome + "\n" +
                 "CPF: " + this.cpf + "\n" +
                 "Salário: " + this.salario + "\n" +
-                "Percentual de bonificação: " + this.getPercentualBonificacao() + "\n" +
+                "Percentual de bonificação: " + (this.getPercentualBonificacao() * 100) + "%" +  "\n" +
                 "Bonificação: " + this.getBonificacao();
     }
 }

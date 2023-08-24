@@ -2,7 +2,7 @@ public class TesteCriaFuncionario {
     public static void main(String[] args) {
         System.out.println();
         System.out.println("Criando funcionário");
-        Funcionario funcionario = new Funcionario();
+        Funcionario funcionario = new Vigilante();
         funcionario.setNome("Wiliam");
         funcionario.setCpf("445.896.687-54");
         funcionario.setSalario(1000);

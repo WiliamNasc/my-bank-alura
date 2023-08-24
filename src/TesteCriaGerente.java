@@ -20,7 +20,7 @@ public class TesteCriaGerente {
         System.out.println("================================");
         System.out.println();
         System.out.println("Salário: " + gerente.getSalario());
-        System.out.println("Percentual bonificação: " + gerente.getPercentualBonificacao() * 100 + "%");
+        System.out.println("Percentual de bonificação: " + gerente.getPercentualBonificacao() * 100 + "%");
         System.out.println("Visualizando bonificação: " + gerente.getBonificacao());
     }
 }
