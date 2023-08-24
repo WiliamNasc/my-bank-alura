@@ -3,7 +3,7 @@ public class Recepcionista extends  Funcionario{
         return 0.01;
     }
     public double getBonificacao() {
-        return super.getBonificacao() + super.getSalario();
+        return super.getSalario() * this.getPercentualBonificacao();
     }
 
     public String toString() {
